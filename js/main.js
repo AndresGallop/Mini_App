@@ -21,10 +21,8 @@ import Carritos from "./components/miniCars.js";
             console.log("Vue is mounted, trying a fetch for the initial data");
             
             fetchData("./includes/index.php")
-                .then(data => {
-                    data.forEach(mini => this.automoviles.push(mini));
-                })
-                .catch(err => console.error(err));            
+                .then(data => {data.forEach(mini => this.automoviles.push(mini));}).catch(err => console.error(err));
+                        
         },
 
         // run a method when we change our view (update the DOM with Vue)
@@ -34,7 +32,9 @@ import Carritos from "./components/miniCars.js";
 
         methods: {   //LOS METHODS SON COMO FUNCIONES PERO SIN NECESIDAD DE ESCRIBIR FUNCTION SEGUN ENTIENDO
             logClicked() {
+
                 console.log("clicked on a list item");
+
             },
 
             clickHeader() {

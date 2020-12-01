@@ -24,11 +24,11 @@
 
     <div class="theVideo">
         <h1 id="cosa">Mini</h1>
-        <div class="thumbs">
-            <img src="images/car1.png" alt="">
-            <img src="images/car1.png" alt="">
-            <img src="images/car1.png" alt="">
-        </div>
+        <!-- <div class="thumbs">
+            <img src="images/car1.png" alt="SomePic">
+            <img src="images/car1.png" alt="SomePic">
+            <img src="images/car1.png" alt="SomePic">
+        </div> -->
         <video autoplay loop muted class="ad_video" poster="video.jpg">
             <source src="videos/mini.webm" type="video/webm">
             <source src="videos/mini.mp4" type="video/mp4">
@@ -36,15 +36,24 @@
     </div>
 
     <!-- <div class="title"><h1>Mini</h1></div> -->
-
-    <section class="lightboxes">   
+    
+  
+        <!-- <mini-thumbs v-for="mini in automoviles" :mini="mini" :key="mini.id"></mini-autos> -->
+            <section class="lightbox">
+               <span class="close">x</span>
+               <h2 class="namecar">Here Name</h2>
+               <img class="imagen" src="" alt="">
+               <p class="descricar">Here Description</p>
+           </section>
+    
+    <!-- <section class="lightboxes">   
     <div class="lightbox">
          <span class="close">x</span>
         <p class="quote">QUOTE</p>
         <img class="imagen" src="" alt="">
         <p class="recome">RECOMMENDATION</p> 
     </div>
-    </section>
+    </section> -->
 
     <h1 id="headertwo">CHOOSE UR CAR</h1>
 
@@ -56,31 +65,6 @@
             <img src="images/car1.png" alt="">
             <img src="images/car1.png" alt=""> -->
     </ul>
-
-    
-
-    <section class="things-section"></section> <!--userTemplate-->
-
-    <template id="things-template"> <!--user-->
-        <div class="thing">
-            <!-- <img src="paint.jpg" alt="paint"> -->
-            <h2 id="2"></h2>
-            <img class="pic" src="" alt="cosas">
-        </div>
-    </template>
-        <!-- <div class="thing two">
-             <img src="excersice.jpg" alt="workout">
-            <h2>Working out</h2>
-        </div>
-        <div class="thing three">
-             <img src="read.jpg" alt="reading"> 
-            <h2>Reading</h2>
-        </div> -->
-    
-
-    <!-- <footer>
-        <p>footer</p>
-    </footer> -->
 </main>
     <script type="module" src="js/main.js"></script>
     
