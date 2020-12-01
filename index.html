@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Cooper</title>
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+    <main id="app">
     <header>
         <img class="logo" src="images/mini.png" alt="logoimage">
         <nav>
@@ -46,11 +48,15 @@
 
     <h1 id="headertwo">CHOOSE UR CAR</h1>
 
-    <div class="cars">
-        <img src="images/car1.png" alt="">
+    
+    <ul class="cars">
+
+        <mini-autos v-for="mini in automoviles" :mini="mini" :key="mini.id"></mini-autos>
+        <!-- <img src="images/car1.png" alt="">
             <img src="images/car1.png" alt="">
-            <img src="images/car1.png" alt="">
-    </div>
+            <img src="images/car1.png" alt=""> -->
+    </ul>
+
     
 
     <section class="things-section"></section> <!--userTemplate-->
@@ -75,6 +81,7 @@
     <!-- <footer>
         <p>footer</p>
     </footer> -->
+</main>
     <script type="module" src="js/main.js"></script>
     
 </body>
