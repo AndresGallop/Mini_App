@@ -26,7 +26,7 @@ export default {
     methods: {
         logClicked: function() {
 
-            debugger;
+            //debugger;
 
              console.log(`Great selection, the ${this.mini.name} is amazing!`);
 
@@ -41,7 +41,7 @@ export default {
          lightbox.classList.add('show-lightbox');
          // lightbox should open but nothing inside yet
          lightbox.querySelector('img').src = `images/${this.mini.image}`;
-         lightbox.querySelector('h3').textContent = this.mini.name ;
+         lightbox.querySelector('h2').textContent = this.mini.name ;
          lightbox.querySelector('p').textContent = this.mini.description;
                 
             
