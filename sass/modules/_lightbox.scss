@@ -1,20 +1,5 @@
-.lightboxes{
-    width: 100%; 
-    height: 100vh;
-    left: 0;
-    top: 0;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    z-index: 150;
-    position: absolute;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
-    display:none;
-}
-
-.show-lightboxes{
-    width: 100%; 
+.lightbox {
+    //width: 100%; 
     height: 100vh;
     left: 0;
     top: 0;
@@ -24,26 +9,52 @@
     z-index: 1150;
     position: absolute;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
-    display:block;
-
+   // background-color: rgba(0, 0, 0, 0.8);
+   // display:none;
 }
+
+
+.lightbox{
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(48, 44, 44, 0.95);
+   display: grid;
+   display: none;
+
+
+   grid-template-columns: 1.5fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-gap: 5px;
+   grid-template-areas: 
+             " imagen nombre"
+             " imagen descri";
+             
+}
+
+//looks good to me! let's check it out
+
+// turn the lightbox on when we have some content to show
+.show-lightbox{ display: block;
+display: grid;}
 
 .close{
     width: 30px;
     height: 30px;
-    grid-area: seis;
+    top: 0;
+    align-self: flex-start;
+    grid-area: nombre;
     color: seashell;
+    background-color: rgba(48, 44, 44, 0);
     justify-self: end;
-    padding-right: 5%;
+    right: 0;
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
 }
 
-.quote{
+.namecar{
     color: lightyellow;
     background-color: rgba(0, 0, 0, 0);
-    grid-area: seis;
+    grid-area: nombre;
     width: 80%;
     height: auto;
     justify-self: center;
@@ -52,17 +63,21 @@
 }
 
 .imagen{
-    width: 100%;
-    height: 100%;
-    grid-area: cinco;
-    object-fit: cover;
+    max-width: 100%;
+    height: 80%;
+    padding: 0;
+    background-color: rgba(0, 255, 255, 0);
+    //background-color: red;
+    grid-area: imagen;
+    object-fit: contain;
+    overflow: hidden;
 }
 
-.recome{
+.descricar{
     width: 80%;
     height: 25%;
     color: lightyellow;
-    grid-area: cuatro;
+    grid-area: descri;
     height: auto;
     justify-self: center;
     align-self: start;
@@ -72,20 +87,4 @@
 
 .close{
     cursor: pointer;
-}
-
-.lightbox{
-   width: 100%;
-   height: 100%;
-   background-color: rgba(48, 44, 44, 0.329);
-   display: grid;
-
-
-   grid-template-columns: 1fr 1.8fr 1fr;
-   grid-template-rows: 1fr 90% 1fr;
-   grid-gap: 5px;
-   grid-template-areas: 
-             "uno dos tres"
-             "cuatro cinco seis"
-             "siete ocho nueve";
 }
